@@ -25,6 +25,7 @@ header {
     position: sticky;
     top: 0;
     z-index: 1000;
+    display: flex;
 }
 
 nav {
@@ -35,10 +36,11 @@ nav {
 
 nav .logo {
     font-family: var(--header-font);
-    font-size: 2rem;
+    font-size: 1.8rem;
     color: var(--title-color);
     text-decoration: none;
     transition: color 0.3s;
+    padding-right: 9px;
 }
 nav .logo:hover {
     color: var(--accent-color);

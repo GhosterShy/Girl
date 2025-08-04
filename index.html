@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://cdn.jsdelivr.net/npm/pagedone@1.2.2/src/css/pagedone.css " rel="stylesheet"/>
+    <link href="https://cdn.jsdelivr.net/npm/pagedone@1.2.2/src/css/pagedone.css" rel="stylesheet"/>
     <link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 </head>
@@ -18,7 +18,7 @@
      <div class="overlay" id="overlay">
          <img src="img/Naushnik.png" alt="Hero Image" class="MusicIcone">
         <h2 class="TextNau">Наушник тағып алыңыз!</h2>
-        <button id="play">▶ Келесі</button>
+        <button id="play">▶Келесі</button>
     </div>
     
    <audio id="bg-music" class="song" controls style="display: none;">
@@ -34,15 +34,32 @@
 
 
     
-    <header>
-        <nav>
+    <header >
+        <nav >
             <a href="index.html" class="logo">Біздің әлеміміз</a>
-            <ul>
-                <li><a href="index.html" class="active">Басты бет</a></li>
-                <li><a href="history.html">Біздің оқиғамыз</a></li>
-                <li><a href="reasons.html">21 Себеп</a></li>
-            </ul>
+           
         </nav>
+
+         <div class="dropdown relative inline-flex">
+                <button style="background-color: #8facdf;" type="button" data-target="dropdown-default" class="dropdown-toggle inline-flex justify-center items-center gap-2 py-3 px-6 text-sm  text-white rounded-full cursor-pointer font-semibold text-center shadow-xs transition-all duration-500 hover:bg-indigo-700 ">Таңдау <svg class="dropdown-open:rotate-180 w-2.5 h-2.5 text-white" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2 5L8.16086 10.6869C8.35239 10.8637 8.64761 10.8637 8.83914 10.6869L15 5" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+                </svg>
+                </button>
+                <div id="dropdown-default" class="dropdown-menu rounded-xl shadow-lg bg-white absolute top-full  mt-2 open hidden" aria-labelledby="dropdown-default">
+                <ul class="py-2">
+                <li>
+                    <a class="block px-6 py-2 hover:bg-gray-100 text-gray-900 font-medium" href="#Bas">Басты кезек </a>
+                </li>
+                <li>
+                    <a class="block px-6 py-2 hover:bg-gray-100 text-gray-900 font-medium" href="#Estelik">Естеліктер</a>
+                </li>
+                <li>
+                    <a class="block px-6 py-2 hover:bg-gray-100 text-gray-900 font-medium" href="#Sebep">Себеп</a>
+                </li>
+               
+                </ul>
+                </div>
+            </div>
     </header>
 
    
@@ -51,7 +68,7 @@
 
 
         <!--HTML CODE-->
-<div  class="w-full relative">
+<div id="Bas"  class="w-full relative">
 <div style="max-width:500px ;border-radius: 5px;" class="swiper progress-slide-carousel swiper-container relative">
 <div class="swiper-wrapper">
 <div style="width: 100%;
@@ -126,13 +143,13 @@
         
 
         <!-- Секция с таймером -->
-        <section class="countdown-section">
+        <section  class="countdown-section">
             <h2>Туған күніңе дейінгі уақыт:</h2>
             <div id="countdown" class="countdown">
                 <div><span id="days">0</span> Күн</div>
                 <div><span id="hours">0</span> Сағат</div>
                 <div><span id="minutes">0</span> Минут</div>
-                <div><span id="seconds">0</span> Секунд</div>
+                <div id="Estelik"><span id="seconds">0</span> Секунд</div>
             </div>
         </section>
 
@@ -146,7 +163,7 @@
 
 
          <!-- Хронология -->
-         <h1 class="page-title">Біздің ерекше күндеріміз</h1>
+         <h1  class="page-title">Біздің ерекше күндеріміз</h1>
         
        
         <div class="timeline">
@@ -198,7 +215,7 @@
                 <div class="timeline-content">
                     
                     <h3>14.07.2025 - Көптен күткен кез</h3>
-                    <p>Біздің таныстығымыздан кейін арада 2 Ай өткеннен кейін саған сөз салайын деп шештім.Уақыты келді деп.Одан бұрын бізден кейін танысқан Нура мен Дияна пара болып кетіп еді.Ал Даяна үйленіп алған кез болатын.Ну енді біліп тұрған шығарсың менің қандай жылдам адам екенімді.Одан 2 күн бұрын ақылдаса бастадым.Сөйтсем Даяна менен бұрын дайындалып алыпты бұл күнге.Кейін Нура мен Диконы үйлендіреміз деген сылтаумен алып келіп, саған сөз салдым.Беретін уәдемізді бердік.</p>
+                    <p id="Sebep">Біздің таныстығымыздан кейін арада 2 Ай өткеннен кейін саған сөз салайын деп шештім.Уақыты келді деп.Одан бұрын бізден кейін танысқан Нура мен Дияна пара болып кетіп еді.Ал Даяна өтірік болса да үйленіп алған кез болатын.Ну енді біліп тұрған шығарсың менің қандай жылдам адам екенімді.Одан 2 күн бұрын ақылдаса бастадым.Сөйтсем Даяна менен бұрын дайындалып алыпты бұл күнге.Кейін Нура мен Диконы үйлендіреміз деген сылтаумен алып келіп, саған сөз салдым.Беретін уәдемізді бердік.</p>
                 </div>
             </div>
         </div>
@@ -247,9 +264,11 @@
 
     <footer>
         <p>Ең әдемі қыз үшін жасалған ❤️</p>
+         <p>Made By Чина😉</p>
     </footer>
 
     <script src="js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/pagedone@1.2.2/src/js/pagedone.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     
     
