@@ -6,6 +6,7 @@
     --text-color: #424242; /* Темно-серый */
     --header-font: 'Lobster', cursive;
     --body-font: 'Montserrat', sans-serif;
+    --title-color: #f68df4; /* Светло-розовый */
 }
 
 body {
@@ -35,7 +36,7 @@ nav {
 nav .logo {
     font-family: var(--header-font);
     font-size: 2rem;
-    color: var(--primary-color);
+    color: var(--title-color);
     text-decoration: none;
     transition: color 0.3s;
 }
@@ -225,7 +226,7 @@ nav ul li a:hover, nav ul li a.active {
 .reason-card h4 {
     font-size: 1.5rem;
     margin: 1rem 0 0.5rem;
-    color: var(--primary-color);
+    color: var(--title-color);
 }
 .reason-card p {
     padding: 0 1.5rem;
