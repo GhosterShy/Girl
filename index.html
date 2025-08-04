@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Туған күніңмен жаным!</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://cdn.jsdelivr.net/npm/pagedone@1.2.2/src/css/pagedone.css " rel="stylesheet"/>
+    <link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    
+    
+     <div class="overlay" id="overlay">
+         <img src="img/Naushnik.png" alt="Hero Image" class="MusicIcone">
+        <h2 class="TextNau">Наушник тағып алыңыз!</h2>
+        <button id="play">▶ Келесі</button>
+    </div>
+    
+   <audio id="bg-music" class="song" controls style="display: none;">
+       
+    </audio>
+    <ul id="playlist" style="display:none;">
+        <li data-src="musics\Gassyr   Qanat - Koshe.mp3"></li>
+        <li data-src="musics\Aikyn Tolepbergen - Сүйгенім.mp3"></li>
+        <li data-src="musics\IL HAN - Sen jaily.mp3"></li>
+    </ul>
+
+
+
+
+    
+    <header>
+        <nav>
+            <a href="index.html" class="logo">Біздің әлеміміз</a>
+            <ul>
+                <li><a href="index.html" class="active">Басты бет</a></li>
+                <li><a href="history.html">Біздің оқиғамыз</a></li>
+                <li><a href="reasons.html">21 Себеп</a></li>
+            </ul>
+        </nav>
+    </header>
+
+   
+
+    <main class="app-content">
+
+
+        <!--HTML CODE-->
+<div  class="w-full relative">
+<div style="max-width:500px ;border-radius: 5px;" class="swiper progress-slide-carousel swiper-container relative">
+<div class="swiper-wrapper">
+<div style="width: 100%;
+    height: 500px;
+    overflow: hidden;
+    position: relative;" class="swiper-slide">
+    <img src="img/FirstImage.jpg" alt="Hero Image" class="FirstImage">
+</div>
+<div style="width: 100%;
+    height: 500px;
+    overflow: hidden;
+    position: relative;" class="swiper-slide">
+   <img src="img/SecondImage.jpg" alt="Hero Image" class="FirstImage">
+</div>
+<div style="width: 100%;
+    height: 500px;
+    overflow: hidden;
+    position: relative;"  class="swiper-slide">
+   <img src="img/FourImage.png" alt="Hero Image" class="FirstImage">
+</div>
+</div>
+<div class="swiper-pagination !bottom-2 !top-auto !w-80 right-0 mx-auto bg-gray-100"></div>
+</div>
+</div>
+
+
+        <!-- Секция с главным фото -->
+        <section class="hero">
+            <div class="hero-image-container">
+
+
+            </div>
+            <div class="hero-text">
+                
+                <h1>Туған күніңмен менің сүйкімді де, ерке <span style="color: rgb(145, 13, 145);">Айнұрым</span> </h1>
+                <p>Мына кішкентай әлемді сен үшін жасадым.</p>
+            </div>
+        </section>
+
+
+<!-- Начало картинок -->
+
+<div style="margin-top: 40px;" class="columns-3 md:columns-2 xl:columns-3 gap-7 ">
+        <div class=" break-inside-avoid mb-8">
+        <img class="h-auto max-w-full rounded-lg" src="img/1.jpg" alt="Gallery image">
+        </div>
+        <div class=" break-inside-avoid  mb-8">
+        <img class="h-auto max-w-full rounded-lg" src="img/2.jpg" alt="Gallery image">
+        </div>
+        <div class=" break-inside-avoid  mb-8">
+        <img class="h-auto max-w-full rounded-lg" src="img/3.jpg" alt="Gallery image">
+        </div>
+        <div class=" break-inside-avoid  mb-8">
+        <img class="h-auto max-w-full rounded-lg" src="img/4.jpg" alt="Gallery image">
+        </div>
+        <div class=" break-inside-avoid  mb-8">
+        <img class="h-auto max-w-full rounded-lg" src="img/5.jpg" alt="Gallery image">
+        </div>
+        <div class=" break-inside-avoid  mb-8">
+        <img class="h-auto max-w-full rounded-lg" src="img/6.jpg" alt="Gallery image">
+        </div>
+         <div class=" break-inside-avoid  mb-8">
+        <img class="h-auto max-w-full rounded-lg" src="img/7.jpg" alt="Gallery image">
+        </div>
+</div>
+
+
+
+
+
+
+        
+
+        <!-- Секция с таймером -->
+        <section class="countdown-section">
+            <h2>Туған күніңе дейінгі уақыт:</h2>
+            <div id="countdown" class="countdown">
+                <div><span id="days">0</span> Күн</div>
+                <div><span id="hours">0</span> Сағат</div>
+                <div><span id="minutes">0</span> Минут</div>
+                <div><span id="seconds">0</span> Секунд</div>
+            </div>
+        </section>
+
+
+
+
+
+
+
+
+
+
+         <!-- Хронология -->
+         <h1 class="page-title">Біздің ерекше күндеріміз</h1>
+        
+       
+        <div class="timeline">
+        
+            <div class="timeline-item reveal">
+                <div class="timeline-img">
+                   
+                    <img src="img/1.jpg" alt="Воспоминание 1">
+                </div>
+                <div class="timeline-content">
+                  
+                    <h3>04.05.2025 - Ең алғаш танысқан кезіміз</h3>
+                    <p>Сол күні менің алғаш кірген кезім еді.Сенімен танысқанымда бірден сұрақтар қойып тастап едің😂.Ашуланшақсың ба?,мінезің қандай?,бұрын мінезің қандай еді деген сұрақтар</p>
+                </div>
+            </div>
+            
+            <!-- !!! ВТОРОЕ СОБЫТИЕ !!! -->
+            <div class="timeline-item reveal">
+                <div class="timeline-img">
+                    
+                    <img src="img/5.jpg" alt="Воспоминание 2">
+                </div>
+                <div class="timeline-content">
+                   
+                    <h3>09.06.2025 - 1 айға сені көрмейтін күнім</h3>
+                    <p>Белгілі себептермен 1 айға кеткен кезім.Танысқанымызға біршама уақыт өтіп еді.Сені танып,біліп қалғанмын.Сол уақыттарда сен маған қызық бола бастаған едің.Кетерімнің алдында сенен сұрап кетіп едім,вдруг мен сияқты адам кездесіп қалса деп.Ну на всякий случай😉😂.Естігім келген жауабымды естіп кеттім.</p>
+                </div>
+            </div>
+            
+             <!-- !!! ТРЕТЬЕ СОБЫТИЕ !!! -->
+            <div class="timeline-item reveal">
+                <div class="timeline-img">
+                    
+                    <img src="img/4.jpg" alt="Воспоминание 3">
+                </div>
+                <div class="timeline-content">
+                    
+                    <h3>26.06.2025 -Қайтып келген кезім</h3>
+                    <p>Сомен қайтып келдім.Жаңалықтарымызбен бөлісіп,қайта жақын бола бастадық.Бұл уақыттан кейін жәй симпатия емес оданда үлкен ара-қатынасқа көшкендей болдық.Көбіне осылай бірге отыра бастадық."Ал, бәрі бізді пара деп ойлайтын болды" деп айтушы едің😂</p>
+                </div>
+            </div>
+
+             <!-- !!! 4 СОБЫТИЕ !!! -->
+            <div class="timeline-item reveal">
+                <div class="timeline-img">
+                    
+                    <img src="img/3.jpg" alt="Воспоминание 3">
+                </div>
+                <div class="timeline-content">
+                    
+                    <h3>14.07.2025 - Көптен күткен кез</h3>
+                    <p>Біздің таныстығымыздан кейін арада 2 Ай өткеннен кейін саған сөз салайын деп шештім.Уақыты келді деп.Одан бұрын бізден кейін танысқан Нура мен Дияна пара болып кетіп еді.Ал Даяна үйленіп алған кез болатын.Ну енді біліп тұрған шығарсың менің қандай жылдам адам екенімді.Одан 2 күн бұрын ақылдаса бастадым.Сөйтсем Даяна менен бұрын дайындалып алыпты бұл күнге.Кейін Нура мен Диконы үйлендіреміз деген сылтаумен алып келіп, саған сөз салдым.Беретін уәдемізді бердік.</p>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+    </main>
+
+    <footer>
+        <p>Ең әдемі қыз үшін жасалған ❤️</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    
+    
+</body>
+</html>

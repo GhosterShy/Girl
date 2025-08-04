@@ -1,0 +1,335 @@
+/* Основные стили и переменные */
+:root {
+    --primary-color: #fce4ec; /* Нежно-розовый */
+    --secondary-color: #fff8e1; /* Кремовый */
+    --accent-color: #ffd54f; /* Золотой */
+    --text-color: #424242; /* Темно-серый */
+    --header-font: 'Lobster', cursive;
+    --body-font: 'Montserrat', sans-serif;
+}
+
+body {
+    font-family: var(--body-font);
+    margin: 0;
+    padding: 0;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+}
+
+/* Стили для хедера и навигации */
+header {
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 1rem 5%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .logo {
+    font-family: var(--header-font);
+    font-size: 2rem;
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+nav .logo:hover {
+    color: var(--accent-color);
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 2rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: bold;
+    padding-bottom: 5px;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s;
+}
+
+nav ul li a:hover, nav ul li a.active {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+}
+
+/* Главная страница: секция Hero */
+.hero {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.hero-image-container {
+    height: 70vh;
+    overflow: hidden;
+}
+
+.hero-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.7);
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+}
+
+.hero-text h1 {
+    font-family: var(--header-font);
+    font-size: 4rem;
+    margin: 0;
+}
+
+/* Секция с таймером */
+.countdown-section {
+    padding: 3rem 1rem;
+    text-align: center;
+    background-color: var(--primary-color);
+}
+.countdown-section h2 {
+    font-family: var(--header-font);
+    font-size: 2.5rem;
+}
+
+.countdown {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.countdown div {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    min-width: 100px;
+}
+
+.countdown span {
+    display: block;
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+/* Стили для внутренних страниц */
+.content-page {
+    padding: 2rem 5%;
+}
+
+.page-title {
+    text-align: center;
+    font-family: var(--header-font);
+    font-size: 3rem;
+    margin-bottom: 3rem;
+    color: #8facdf;
+}
+
+/* Хронология (Timeline) */
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+}
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 4px;
+    background-color: var(--accent-color);
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -2px;
+}
+.timeline-item {
+    padding: 1rem 2.5rem;
+    position: relative;
+    width: 50%;
+}
+.timeline-item:nth-child(odd) {
+    left: 0;
+    padding-right: 4rem;
+    text-align: right;
+}
+.timeline-item:nth-child(even) {
+    left: 50%;
+    padding-left: 4rem;
+}
+.timeline-item::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border: 4px solid var(--accent-color);
+    top: 30px;
+    border-radius: 50%;
+    z-index: 1;
+}
+.timeline-item:nth-child(odd)::after {
+    right: -10px;
+}
+.timeline-item:nth-child(even)::after {
+    left: -10px;
+}
+.timeline-img {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
+.timeline-img img {
+    width: 100%;
+    display: block;
+}
+.timeline-content {
+    margin-top: 1rem;
+}
+
+/* Сетка с причинами */
+.reasons-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+.reason-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    overflow: hidden;
+    text-align: center;
+    padding-bottom: 1.5rem;
+}
+.reason-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+.reason-card h4 {
+    font-size: 1.5rem;
+    margin: 1rem 0 0.5rem;
+    color: var(--primary-color);
+}
+.reason-card p {
+    padding: 0 1.5rem;
+    margin: 0;
+}
+
+/* Футер */
+footer {
+    text-align: center;
+    padding: 2rem 1rem;
+    margin-top: 2rem;
+    background-color: #fff;
+}
+
+/* Анимация появления */
+.reveal{
+  position: relative;
+  transform: translateY(100px);
+  opacity: 0;
+  transition: 1s all ease;
+}
+
+.reveal.active{
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    nav ul { display: none; } /* Упрощение для примера. Можно добавить бургер-меню */
+    .hero-text h1 { font-size: 3.5rem; }
+    .countdown { flex-direction: column; }
+    .timeline::after { left: 20px; }
+    .timeline-item { width: 100%; padding-left: 50px; padding-right: 1rem; }
+    .timeline-item:nth-child(odd) { left: 0; text-align: left; }
+    .timeline-item:nth-child(even) { left: 0; padding-left: 50px; }
+    .timeline-item::after { left: 10px; }
+}
+
+
+
+.overlay {
+    position: fixed;
+    z-index: 9999;
+    inset: 0;
+    background: rgba(30, 0, 40, 0.85);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.5s;
+    flex-direction: column;
+}
+
+.MusicIcone
+{
+    width: 200px;
+    height: 200px;
+    
+}
+
+.TextNau{
+    font-family: 'Lobster', cursive;
+    color: #fff;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* Кнопка "Start" */
+#play {
+    padding: 24px 64px;
+    font-size: 2rem;
+    border: none;
+    border-radius: 40px;
+    background: linear-gradient(90deg, #a4508b 0%, #5f0a87 100%);
+    color: #fff;
+    font-family: 'Lobster', cursive;
+    box-shadow: 0 8px 32px rgba(80,0,80,0.2);
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+#play:hover {
+    background: linear-gradient(90deg, #5f0a87 0%, #a4508b 100%);
+    transform: scale(1.05);
+}
+
+
+
+/* Carusel */
+.swiper-wrapper {
+height: max-content !important;
+padding-bottom: 64px !important;
+-webkit-transition-timing-function: linear !important;
+transition-timing-function: linear !important;
+position: relative;
+}
+.swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
+background: #4F46E5 !important;
+}
+.FirstImage {
+  
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    object-fit: cover;
+    display: block;
+
+}
