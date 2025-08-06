@@ -1,33 +1,55 @@
 document.addEventListener('DOMContentLoaded', function() {
 
     // --- ЛОГИКА ДЛЯ ТАЙМЕРА ОБРАТНОГО ОТСЧЕТА ---
-    // Ищем таймер только если он есть на странице
     const countdownElement = document.getElementById('countdown');
     if (countdownElement) {
       
-        // Формат: "Месяц день, год часы:минуты:секунды" (например, "Aug 22, 2025 00:00:00")
-        const birthday = "Aug 12, 2025 00:00:00"; 
-        const countDownDate = new Date(birthday).getTime();
+          // Месяц и день дня рождения
+        const birthdayMonth = 8; // Август (нумерация с 0)
+        const birthdayDay = 12;
 
-        const x = setInterval(function() {
-            const now = new Date().getTime();
-            const distance = countDownDate - now;
+       
 
-            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    function updateCountdown() {
+            const now = new Date();
+            const year = now.getFullYear();
+            const birthdayDate = new Date(year, birthdayMonth - 1, birthdayDay, 0, 0, 0);
 
-            document.getElementById('days').innerText = days;
-            document.getElementById('hours').innerText = hours;
-            document.getElementById('minutes').innerText = minutes;
-            document.getElementById('seconds').innerText = seconds;
+            // Проверяем, сегодня ли день рождения
+            const isBirthday =
+                now.getDate() === birthdayDate.getDate() &&
+                now.getMonth() === birthdayDate.getMonth();
 
-            if (distance < 0) {
-                clearInterval(x);
-                countdownElement.innerHTML = "<div>🎉</div><div>С</div><div>Днем</div><div>Рождения!</div>";
+            // Проверяем, прошёл ли день рождения (на следующий день)
+            const isAfterBirthday =
+                now > birthdayDate &&
+                !(now.getDate() === birthdayDate.getDate() && now.getMonth() === birthdayDate.getMonth());
+
+            if (isBirthday) {
+                countdownElement.innerHTML = "<div>Туған</div><div>күніңмен</div><div>жаным</div><div>🎉</div>";
+            } else {
+                // Если день рождения прошёл, начинаем отсчёт до следующего года
+                let nextBirthday = birthdayDate;
+                if (isAfterBirthday) {
+                    nextBirthday = new Date(year + 1, birthdayMonth - 1, birthdayDay, 0, 0, 0);
+                }
+                const countDownDate = nextBirthday.getTime();
+                const distance = countDownDate - now.getTime();
+
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                document.getElementById('days').innerText = days;
+                document.getElementById('hours').innerText = hours;
+                document.getElementById('minutes').innerText = minutes;
+                document.getElementById('seconds').innerText = seconds;
             }
-        }, 1000);
+}
+
+        updateCountdown();
+        setInterval(updateCountdown, 1000);
     }
 
     // --- ЛОГИКА ДЛЯ ПЛАВНОГО ПОЯВЛЕНИЯ ЭЛЕМЕНТОВ ПРИ ПРОКРУТКЕ ---
